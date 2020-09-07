@@ -9,7 +9,7 @@
             {{errorMessage}}
         </div>
 
-        <label for="email">E-mail: <span class="lblError">*</span></label>
+        <label for="email"><span>E-mail: <span class="lblError">*</span></span></label>
         <div class="controls">
             <input type="text" id="username" placeholder="Email" class="form-control" formControlName="email">
             <p class="lblError" *ngIf="loginForm.get('email').hasError('required') && !loginForm.get('email').pristine">
@@ -28,8 +28,8 @@
             </p>
         </div>
 
-        <label><button class="cancelbtn" [routerLink]="['/']" aria-label="Cancel">Cancel</button></label>
-        <button type="submit" [disabled]='loginForm.invalid' aria-label="Login"> Login
+        <label><button class="cancelbtn" [routerLink]="['/']" aria-label="Cancel"  tabindex="0">Cancel</button></label>
+        <button type="submit" [disabled]='loginForm.invalid' class="submitBtn" tabindex="0" aria-label="Login"> Login
         </button>
 
     </form>

@@ -30,10 +30,10 @@
         </div>
         <label for="Image URL">Image Url: </label>
         <div class="controls">
-            <input type="password" id="imgUrl" name="imgUrl" placeholder="Image Url" class="form-control" formControlName="imgUrl">
+            <input type="test" id="imgUrl" name="imgUrl" placeholder="Image Url" class="form-control" formControlName="imgUrl">
         </div>
-        <label><button class="cancelbtn" [routerLink]="['/']" aria-label="Cancel">Cancel</button></label>
-        <button type="submit" [disabled]='editform.invalid' aria-label="Update Product"> Update Product
+        <label><button class="cancelbtn" [routerLink]="['/']" tabindex="0" aria-label="Cancel">Cancel</button></label>
+        <button type="submit" [disabled]='editform.invalid' tabindex="0" class="submitBtn" aria-label="Update Product"> Update Product
         </button>
     </form>
 </div>

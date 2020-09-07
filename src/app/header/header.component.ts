@@ -15,7 +15,7 @@ export class HeaderComponent implements OnInit {
   isAuthenticated: false;
   user = null;
   errorMessage = null;
-  darkTheme = new FormControl(false);
+
   constructor(private store: Store<AppState>) {
     this.getState = this.store.select(selectAuthState);
   }

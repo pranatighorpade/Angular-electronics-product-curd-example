@@ -5,24 +5,17 @@ import { HttpTestingController } from '@angular/common/http/testing';
 
 describe('ThemeService', () => {
   let service: ThemeService;
-  let httpMock: HttpTestingController;
+
   beforeEach(() => {
     TestBed.configureTestingModule({});
     service = TestBed.inject(ThemeService);
   });
 
-  beforeEach(inject(
-    [ThemeService, HttpTestingController],
-    (serviceName, httpMockName) => {
-      service = serviceName;
-      httpMock = httpMockName;
-    }
-  ));
+  beforeEach(inject([ThemeService], (serviceName) => {
+    service = serviceName;
+  }));
 
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
-
-
-
 });
