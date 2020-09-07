@@ -13,9 +13,9 @@ describe('ThemeService', () => {
 
   beforeEach(inject(
     [ThemeService, HttpTestingController],
-    (_service, _httpMock) => {
-      service = _service;
-      httpMock = _httpMock;
+    (serviceName, httpMockName) => {
+      service = serviceName;
+      httpMock = httpMockName;
     }
   ));
 
@@ -23,6 +23,6 @@ describe('ThemeService', () => {
     expect(service).toBeTruthy();
   });
 
- 
+
 
 });

@@ -15,9 +15,9 @@ describe('AuthService', () => {
 
   beforeEach(inject(
     [AuthService, HttpTestingController],
-    (_service, _httpMock) => {
-      service = _service;
-      httpMock = _httpMock;
+    (serviceName, httpMockName) => {
+      service = serviceName;
+      httpMock = httpMockName;
     }
   ));
 
@@ -31,7 +31,6 @@ describe('AuthService', () => {
   });
 
 
-  
 
 
 
