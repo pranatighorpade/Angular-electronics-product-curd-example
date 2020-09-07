@@ -1,0 +1,22 @@
+<div class="product-card">
+    <h1>My Products</h1>
+    <button type="button" class="add-btn" area-label="Create Product" *ngIf='isAuthenticated' [routerLink]="['/product/create']">Create new product</button>
+    <div class="column" *ngFor="let product of products">
+
+        <div class="product-tumb">
+            <img src="{{product.imgUrl}}" alt="{{product.productName}}">
+        </div>
+        <div class="product-details">
+            <h4><a href="">{{product.productName}}</a></h4>
+            <span class="product-catagory">{{product.category}}</span>
+            <p>{{product.description}}</p>
+            <div class="product-bottom-details">
+                <div class="product-price">Price &#x20b9;{{product.price}}</div>
+                <div class="product-links" *ngIf='isAuthenticated'>
+                    <a [routerLink]="['/product/', product.id, 'edit']" tabindex="0" area-label="Edit Product">Edit</a>
+                    <a class="delBtn" area-label="Delete Product" (click)="deleteProduct(product.id)" tabindex="0" area-label="Delete Product">Delete</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
