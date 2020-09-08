@@ -3,7 +3,6 @@ import { Store } from '@ngrx/store';
 import { AppState, selectAuthState } from '../store/app.states';
 import { LogOut } from '../store/actions/auth.actions';
 import { Observable } from 'rxjs';
-import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-header',

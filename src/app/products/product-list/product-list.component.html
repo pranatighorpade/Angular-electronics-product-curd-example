@@ -1,5 +1,5 @@
 <button type="button" class="add-btn" area-label="Create Product" *ngIf='isAuthenticated' [routerLink]="['/product/create']" tabindex="0">Create new product</button>
-
+<div class="emptyDiv"></div>
 <div class="product-card">
 
     <div class="column" *ngFor="let product of products">

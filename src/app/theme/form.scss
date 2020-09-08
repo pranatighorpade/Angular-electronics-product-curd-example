@@ -37,6 +37,7 @@ label {
 
 .lblError {
     color: red;
+    font-size: 13px;
 }
 
 input {
@@ -84,11 +85,13 @@ form button:disabled {
     label {
         text-align: right;
         grid-column: 1 / 2;
+        font-size: 15px;
     }
     .formLabel {
         grid-column: 2/4;
         color: black;
         font-weight: 600;
         margin: 0;
+        text-align: left;
     }
 }
