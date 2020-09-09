@@ -10,7 +10,7 @@ describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [AppComponent, HeaderComponent],
-      imports: [RouterTestingModule, FormsModule, ReactiveFormsModule],
+      imports: [FormsModule, ReactiveFormsModule],
       providers: [ThemeService],
     }).compileComponents();
   }));
@@ -21,3 +21,4 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 });
+
