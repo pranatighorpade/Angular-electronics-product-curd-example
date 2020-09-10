@@ -42,7 +42,7 @@
         <button *ngIf="isNewProduct" class="submitBtn" type="submit" [disabled]='productForm.invalid' aria-label="Add Product"> Add
             Product
         </button>
-        <button *ngIf="!isNewProduct" class="submitBtn" type="submit" [disabled]='editform.invalid' aria-label="Update Product"> Update
+        <button *ngIf="!isNewProduct" class="submitBtn" type="submit" [disabled]='productForm.invalid' aria-label="Update Product"> Update
             Product
         </button>
     </form>

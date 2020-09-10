@@ -39,7 +39,9 @@ export class LoginSignupComponent implements OnInit {
     });
 
     this.getState.subscribe((state) => {
-      this.errorMessage = state.errorMessage;
+      if (state && state.errorMessage) {
+        this.errorMessage = state.errorMessage;
+      }
     });
     this.errorMessage = null;
 
@@ -62,6 +64,7 @@ export class LoginSignupComponent implements OnInit {
       this.store.dispatch(new LogIn(payload));
     } else {
       this.store.dispatch(new SignUp(payload));
+      alert('Sign Up Successfully! Login here');
     }
   }
 }
