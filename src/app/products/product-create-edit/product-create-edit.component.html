@@ -14,25 +14,29 @@
         </div>
         <label for="productName">Product Name <span class="lblError">*</span> </label>
         <div class="controls">
-            <input type="text" id="productName" placeholder="Product Name" class="form-control" formControlName="productName">
+            <input type="text" id="productName" placeholder="Product Name" class="form-control" formControlName="productName" aria-labelledby="productName">
             <p class="lblError" *ngIf="productForm.get('productName').hasError('required') && !productForm.get('productName').pristine">
                 Please provide product name
             </p>
         </div>
         <label for="description"> Description </label>
         <div class="controls">
-            <textarea id="description" placeholder=" Description" class="form-control" maxlength="50" formControlName="description"></textarea>
+            <textarea id="description" placeholder=" Description" class="form-control" maxlength="50" formControlName="description" aria-labelledby="description"></textarea>
+            <p class="lblError" *ngIf="productForm.get('description').hasError('maxlength') && !productForm.get('description').pristine">
+                Description should contain maximum 50 character
+
+            </p>
         </div>
         <label for="Price">Price <span class="lblError">*</span></label>
         <div class="controls">
-            <input type="number" id="price" min="1" placeholder="Price" class="form-control" formControlName="price">
+            <input type="number" id="price" min="1" placeholder="Price" class="form-control" formControlName="price" aria-labelledby="price">
             <p class="lblError" *ngIf="productForm.get('price').hasError('required') && !productForm.get('price').pristine">
                 Please provide Price
             </p>
         </div>
         <label for="category">Category</label>
         <div class="controls">
-            <input type="text" id="category" placeholder="Category" class="form-control" formControlName="category">
+            <input type="text" id="category" placeholder="Category" class="form-control" formControlName="category" aria-labelledby="category">
         </div>
         <label for="Image URL">Image Url </label>
         <div class="controls">

@@ -1,4 +1,4 @@
-<button type="button" class="add-btn" area-label="Create Product" *ngIf='isAuthenticated' [routerLink]="['/product/create']" tabindex="0">Create new product</button>
+<button type="button" class="add-btn" aria-label="Create Product" *ngIf='isAuthenticated' [routerLink]="['/product/create']" tabindex="0">Create new product</button>
 <div class="emptyDiv"></div>
 <div class="product-card">
 
@@ -14,8 +14,8 @@
             <div class="product-bottom-details">
                 <div class="product-price">Price &#x20b9;{{product.price}}</div>
                 <div class="product-links" *ngIf='isAuthenticated'>
-                    <a [routerLink]="['/product/', product.id, 'edit']" tabindex="0" area-label="Edit Product">Edit</a>
-                    <a class="delBtn" area-label="Delete Product" (click)="deleteProduct(product.id)" tabindex="0" area-label="Delete Product">Delete</a>
+                    <a [routerLink]="['/product/', product.id, 'edit']" tabindex="0" aria-label="Edit Product">Edit</a>
+                    <a class="delBtn" aria-label="Delete Product" (click)="deleteProduct(product.id)" tabindex="0" aria-label="Delete Product">Delete</a>
                 </div>
             </div>
         </div>

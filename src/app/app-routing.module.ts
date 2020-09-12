@@ -6,7 +6,7 @@ import { ProductCreateEditComponent } from './products/product-create-edit/produ
 
 
 const routes: Routes = [
-  { path: '',  redirectTo: '/product',    pathMatch: 'full' },
+  {path: '', component: ProductListComponent},
   { path: 'product', component: ProductListComponent},
   { path: 'login',   component: LoginSignupComponent , data: { isLogin: true } },
   { path: 'signup',  component: LoginSignupComponent },
